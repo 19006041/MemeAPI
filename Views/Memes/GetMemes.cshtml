@@ -1,0 +1,20 @@
+@model IEnumerable<memes.Models.Meme>
+@{
+    ViewBag.Title = "Memes";
+}
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Choose</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.name)</td>
+            <td><img src="@item.url" width="70px"></td>
+            <td>@Html.ActionLink("Generate", "Generate", new { id = item.id, url = item.url}) </td
+        </tr>
+    }
+</table>

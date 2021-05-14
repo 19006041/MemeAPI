@@ -1,0 +1,16 @@
+@{
+    ViewBag.Title = "Generate Meme";
+}
+
+<img src="@ViewBag.url" width="200px">
+<br/>
+<form method="post">
+    Caption 1:
+    <input type="text" id="caption1" name="Caption1"/>
+    <br/>
+    Caption 2:
+    <input type="text" id="caption2" name="Caption2"/>
+    <br/>
+    <input name="id" type="hidden" value="@ViewBag.id"/>
+    <input type="submit" text="Generate"/>
+</form>
